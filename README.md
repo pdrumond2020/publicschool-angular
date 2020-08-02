@@ -1,6 +1,6 @@
 # PublicSchool
 
-Gestão de Escolas Públicas.
+Gestão de Escolas Públicas - Frontend
 
 Este projeto foi criado com o [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.6.
 
