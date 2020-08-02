@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="side-nav" mode="side" opened fixedInViewport="true" fixedTopGap="63">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home
+                </i>
+                Home
+            </a>
+            <a mat-list-item routerLink="/schools">
+                <i class="material-icons">
+                    post_add
+                </i>
+                Cadastro de Escola Pública
+            </a>
+            <a mat-list-item routerLink="/grades">
+                <i class="material-icons">
+                    post_add
+                </i>
+                Cadastro de Turmas
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <!-- routers -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

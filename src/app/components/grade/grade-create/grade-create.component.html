@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Nova Turma</mat-card-title>
+    <form [formGroup]="gradeForm" autocomplete="off" novalidate>
+        <mat-form-field appearance="fill">
+            <mat-label>Selecione uma Escola Pública</mat-label>
+            <mat-select [(ngModel)]="grade.schoolId" name="schoolId" formControlName="schoolId">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let school of schools | async" [value]="school.id">{{ school.name }}</mat-option>
+            </mat-select>
+            <mat-error>Campo Escola Pública é obrigatório.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição*" [(ngModel)]="grade.description" name="description" formControlName="description">
+            <mat-error *ngIf="hasError('description', 'required')">Campo Descrição é obrigatório.</mat-error>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="create(gradeForm.value)" [disabled]="!gradeForm.valid" color="primary">
+        Save
+    </button>     
+    <button mat-raised-button (click)="cancel()">
+        Cancel
+    </button> 
+</mat-card>
